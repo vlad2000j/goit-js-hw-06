@@ -4,8 +4,8 @@ console.log(`Number of categories: ${totalCategories.length}`);
 
 let categoryString = '';
 totalCategories.forEach(category => {
-  const categoryName = category.children[0].textContent;
-  const categoryElementsCount = category.children[1].children.length;
+  const categoryName = category.firstElementChild.textContent;
+  const categoryElementsCount = category.lastElementChild.children.length;
   categoryString += `Category: ${categoryName}\nElements: ${categoryElementsCount}\n`;
 });
 
